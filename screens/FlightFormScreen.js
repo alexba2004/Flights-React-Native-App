@@ -8,7 +8,7 @@ import {
   Switch,
 } from "react-native";
 import { insertFlight } from "../api";
-
+import * as VectorIcons from "react-native-vector-icons";
 const FlightFormScreen = ({ navigation }) => {
   const [flight, setFlight] = useState({
     seat: "",
@@ -30,7 +30,10 @@ const FlightFormScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Nuevo Vuelo</Text>
+      <Text style={styles.titulo}>
+        Nuevo Vuelo{"  "}
+        <VectorIcons.Fontisto name="plane" size={30} color="#900" />
+      </Text>
       <TextInput
         placeholder="Asiento"
         onChangeText={(text) => handleChange("seat", text)}

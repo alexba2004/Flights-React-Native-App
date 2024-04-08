@@ -8,6 +8,7 @@ import {
   Switch,
 } from "react-native";
 import { updateFlight } from "../api";
+import * as VectorIcons from "react-native-vector-icons";
 
 const EditFlightFormScreen = ({ navigation, route }) => {
   const { item } = route.params;
@@ -35,7 +36,10 @@ const EditFlightFormScreen = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Editar Vuelo</Text>
+      <Text style={styles.titulo}>
+        Editar Vuelo{"  "}
+        <VectorIcons.Fontisto name="plane" size={30} color="#900" />
+      </Text>
       <TextInput
         placeholder="Asiento"
         onChangeText={(text) => handleChange("seat", text)}
